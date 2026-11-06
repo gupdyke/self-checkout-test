@@ -1,0 +1,56 @@
+/* Self Checkout's Help detail pages: static, one stylesheet. Same blues and amber as the app. */
+:root { --bg:#fff; --fg:#111827; --muted:#6b7280; --blue:#2563eb; --link:#1a5fb4; --amber:#d97706; --line:#d1d5db; --box:#f3f4f6; --btn:#2563eb; }
+:root.dark { --bg:#0b0f19; --fg:#fff; --muted:#9ca3af; --blue:#60a5fa; --link:#8ab4f8; --amber:#fbbf24; --line:#374151; --box:#161c2b; --btn:#2563eb; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+main { max-width:40rem; margin:0 auto; padding:16px 16px 48px; }
+a { color:var(--link); }
+.back { display:inline-block; margin-bottom:8px; font-size:.9rem; }
+h1 { font-size:1.6rem; margin:.2em 0 .6em; color:var(--blue); }
+h2 { font-size:1.15rem; margin:1.6em 0 .4em; }
+p, li { font-size:.95rem; }
+ul { padding-left:1.2em; }
+.blue { color:var(--blue); font-weight:600; }
+.amber { color:var(--amber); font-weight:600; }
+.why { border-left:4px solid var(--blue); padding:.1em 0 .1em 12px; margin:1em 0; }
+/* A picture of the app's routes box, with the rows as the app shows them */
+.ex { background:var(--box); border:1px solid var(--line); border-radius:8px; padding:10px 14px; margin:12px 0; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:1rem; font-weight:600; }
+.ex .cap { display:block; font:600 .8rem system-ui,sans-serif; color:var(--muted); margin-bottom:4px; }
+.ex .h { display:block; font:600 1.05rem system-ui,sans-serif; color:var(--blue); margin-top:6px; }
+.ex .h.u { text-decoration:underline; text-underline-offset:4px; }
+.ex .b { color:var(--blue); }
+.ex .a { color:var(--amber); }
+.ex .note { display:block; font:400 .8rem system-ui,sans-serif; color:var(--muted); }
+.btn { display:inline-block; min-width:64px; padding:3px 12px; border-radius:6px; background:var(--btn); color:#fff; font-weight:700; font-size:.9rem; text-align:center; }
+.more { margin-top:2.4em; border-top:1px solid var(--line); padding-top:12px; font-size:.9rem; }
+.more a { display:inline-block; margin:2px 10px 2px 0; }
+/* The app's round gray icon buttons (clipboard, Settings), as a picture inline */
+.ic { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border:2px solid #9ca3af; border-radius:50%; vertical-align:middle; color:#4b5563; }
+:root.dark .ic { color:#d1d5db; }
+.foot { margin-top:20px; font-size:.75rem; line-height:1.6; text-align:center; color:var(--muted); }
+/* Heading icons, as Help shows them next to Doubles to Avoid, Custom Routes and Hidden Routes */
+h1 .hi { vertical-align:-3px; margin-right:8px; }
+h1 .hi.ban { color:#dc2626; }
+h1 .hi.star { color:var(--fg); }
+h1 .hi.eye { color:#6b7280; }
+:root.dark h1 .hi.ban { color:#ef4444; }
+:root.dark h1 .hi.eye { color:#9ca3af; }
+h1 .hi.target { color:var(--fg); }
+h1 .hi.check { color:#16a34a; }
+:root.dark h1 .hi.check { color:#22c55e; }
+
+/* Color themes (Settings > Theme), set by help.js as <html data-theme>: same colors as the app's (src/index.css) */
+html[data-theme="red"] { --bg:hsl(0 30% 97%); --fg:hsl(0, 10%, 12%); --muted:hsl(0, 10%, 47%); --blue:hsl(0, 48%, 45%); --link:hsl(0, 48%, 37%); --btn:hsl(0, 48%, 45%); --line:hsl(0, 10%, 84%); --box:hsl(0 24% 94%); }
+html[data-theme="red"].dark { --bg:hsl(0 14% 7%); --fg:#fff; --muted:hsl(0, 10%, 65%); --blue:hsl(0, 48%, 64%); --link:hsl(0, 48%, 75%); --btn:hsl(0, 48%, 54%); --line:hsl(0, 10%, 28%); --box:hsl(0 10% 15%); }
+html[data-theme="tan"] { --bg:hsl(38 38% 88%); --fg:hsl(36, 16%, 12%); --muted:hsl(36, 16%, 47%); --blue:hsl(36, 48%, 45%); --link:hsl(36, 48%, 37%); --btn:hsl(36, 48%, 45%); --line:hsl(36, 16%, 84%); --box:hsl(38 30% 82%); }
+html[data-theme="tan"].dark { --bg:hsl(36 16% 9%); --fg:#fff; --muted:hsl(36, 16%, 65%); --blue:hsl(36, 48%, 64%); --link:hsl(36, 48%, 75%); --btn:hsl(36, 48%, 54%); --line:hsl(36, 16%, 28%); --box:hsl(36 11% 17%); }
+html[data-theme="purple"] { --bg:hsl(270 40% 97%); --fg:hsl(270, 12%, 12%); --muted:hsl(270, 12%, 47%); --blue:hsl(270, 48%, 32%); --link:hsl(270, 48%, 37%); --btn:hsl(270, 48%, 32%); --line:hsl(270, 12%, 84%); --box:hsl(270 30% 94%); }
+html[data-theme="purple"].dark { --bg:hsl(270 18% 8%); --fg:#fff; --muted:hsl(270, 12%, 65%); --blue:hsl(270, 48%, 72%); --link:hsl(270, 48%, 75%); --btn:hsl(270, 48%, 32%); --line:hsl(270, 12%, 28%); --box:hsl(270 12% 16%); }
+html[data-theme="pink"] { --bg:hsl(330 55% 96%); --fg:hsl(330, 12%, 12%); --muted:hsl(330, 12%, 47%); --blue:hsl(330, 48%, 45%); --link:hsl(330, 48%, 37%); --btn:hsl(330, 48%, 45%); --line:hsl(330, 12%, 84%); --box:hsl(330 40% 92%); }
+html[data-theme="pink"].dark { --bg:hsl(330 16% 8%); --fg:#fff; --muted:hsl(330, 12%, 65%); --blue:hsl(330, 48%, 64%); --link:hsl(330, 48%, 75%); --btn:hsl(330, 48%, 54%); --line:hsl(330, 12%, 28%); --box:hsl(330 11% 16%); }
+html[data-theme="green"] { --bg:hsl(125 25% 94%); --fg:hsl(125, 10%, 12%); --muted:hsl(125, 10%, 47%); --blue:hsl(125, 55%, 22%); --link:hsl(125, 55%, 17%); --btn:hsl(125, 55%, 22%); --line:hsl(125, 10%, 84%); --box:hsl(125 20% 90%); }
+html[data-theme="green"].dark { --bg:hsl(125 18% 6%); --fg:#fff; --muted:hsl(125, 10%, 65%); --blue:hsl(125, 55%, 52%); --link:hsl(125, 55%, 62%); --btn:hsl(125, 55%, 22%); --line:hsl(125, 10%, 28%); --box:hsl(125 12% 14%); }
+html[data-theme="slate"] { --bg:hsl(215 20% 95%); --fg:hsl(215, 14%, 12%); --muted:hsl(215, 14%, 47%); --blue:hsl(215, 22%, 45%); --link:hsl(215, 22%, 37%); --btn:hsl(215, 22%, 45%); --line:hsl(215, 14%, 84%); --box:hsl(215 18% 90%); }
+html[data-theme="slate"].dark { --bg:hsl(215 16% 9%); --fg:#fff; --muted:hsl(215, 14%, 65%); --blue:hsl(215, 22%, 64%); --link:hsl(215, 22%, 75%); --btn:hsl(215, 22%, 54%); --line:hsl(215, 14%, 28%); --box:hsl(215 12% 17%); }
+html[data-theme="seafoam"] { --bg:hsl(155 45% 94%); --fg:hsl(155, 12%, 12%); --muted:hsl(155, 12%, 47%); --blue:hsl(155, 48%, 33%); --link:hsl(155, 48%, 27%); --btn:hsl(155, 48%, 33%); --line:hsl(155, 12%, 84%); --box:hsl(155 35% 89%); }
+html[data-theme="seafoam"].dark { --bg:hsl(155 18% 7%); --fg:#fff; --muted:hsl(155, 12%, 65%); --blue:hsl(155, 48%, 64%); --link:hsl(155, 48%, 74%); --btn:hsl(155, 48%, 42%); --line:hsl(155, 12%, 28%); --box:hsl(155 11% 15%); }

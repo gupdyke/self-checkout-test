@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Import / Export · Self Checkout Help</title>
+<link rel="stylesheet" href="help.css">
+<script src="help.js"></script>
+</head>
+<body>
+<main>
+<a class="back" href="../?help">← Back to Help</a>
+<h1>Import / Export</h1>
+
+<p><strong>Custom Routes</strong>, <strong>Hidden Routes</strong> and <strong>Saved Sessions</strong> are saved on this device only. <strong>Export</strong> saves them to files; <strong>Import</strong> loads those files on any device running Self Checkout.</p>
+<h2>Export</h2>
+<p>In <span class="blue">Settings</span> <span class="ic" role="img" aria-label="the Settings button"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M4 6h16M4 18h16"/></svg></span>, tap <strong>Export</strong>. The file is named like <code>self-checkout-routes-2026-10-16.json</code> and holds both your custom and hidden routes. The web app downloads it; the Android app opens the device's share sheet so you can save it or send it to yourself.</p>
+<h2>Import</h2>
+<p>Tap <strong>Import</strong> and pick such a file. It checks every route first. Import <em>adds</em> to the routes you already have and skips any you've already saved, so importing the same file twice is harmless.</p>
+<h2>Saved Sessions</h2>
+<p><strong>Export</strong> also saves your <strong>Saved Sessions</strong>, to a second file named like <code>self-checkout-sessions-2026-10-20.json</code>. <strong>Import</strong> takes either file, or both at once, and tells them apart. Sessions you already have aren't added twice.</p>
+<h2>Why bother?</h2>
+<div class="why"><p>Routes and sessions live in your device's own storage. Uninstalling the app, clearing site data or buying a new device erases them. The web app, a Home Screen copy and the Android app also keep separate sets.</p></div>
+<h2>Examples</h2>
+<ul>
+<li><strong>New device:</strong> export on the old one, send yourself the file, import on the new one.</li>
+<li><strong>Web to Android:</strong> export from the web app, import in the Android app, and both have the same routes.</li>
+<li><strong>Backup:</strong> export after you've set up your routes and keep the file somewhere safe.</li>
+</ul>
+
+<div class="more"><strong>More Help</strong><br><a href="each-dart-full-turn.html">Each Dart / Full Turn</a><a href="sido-dido.html">SIDO / DIDO</a><a href="checkouts.html">Checkouts</a><a href="set-up.html">Set up</a><a href="doubles-to-avoid.html">Doubles to Avoid</a><a href="custom-routes.html">Custom Routes</a><a href="hidden-routes.html">Hidden Routes</a><a href="session-stats.html">Session Stats and Darts Used</a></div>
+<p class="foot">© 2026 Gerald L. Updyke · <a href="license.txt">License</a><br>Questions or ideas? <a href="mailto:darts.selfcheckout@gmail.com">darts.selfcheckout@gmail.com</a></p>
+</main>
+</body>
+</html>

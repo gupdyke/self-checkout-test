@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/self-checkout-test/sw.js', { scope: '/self-checkout-test/' })})}
